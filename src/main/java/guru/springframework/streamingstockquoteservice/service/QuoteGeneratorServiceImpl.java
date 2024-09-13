@@ -1,6 +1,7 @@
 package guru.springframework.streamingstockquoteservice.service;
 
 import guru.springframework.streamingstockquoteservice.model.Quote;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.SynchronousSink;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiFunction;
 
+@Service
 public class QuoteGeneratorServiceImpl implements QuoteGeneratorService{
     private final MathContext mathContext = new MathContext(2);
     private final Random random = new Random();
